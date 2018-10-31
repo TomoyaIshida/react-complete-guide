@@ -4,7 +4,7 @@ import Aux from '../../hoc/Aux';
 import classes from './Layout.css';
 import Toolbar from '../Navigation/Toolbar/Toolbar';
 
-const layout = ( props ) => (
+const Layout = ( props ) => (
   <Aux>
     <Toolbar />
     <main className={classes.Content}>
@@ -13,4 +13,4 @@ const layout = ( props ) => (
   </Aux>
 );
 
-export default layout;
+export default Layout;
