@@ -1,2 +1,2 @@
-React developers guide
+React-Redux application list
 ===
