@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import axios from 'axios'
+import axios from 'axios';
 import { Redirect } from 'react-router-dom';
 
 import './NewPost.css';
@@ -19,13 +19,13 @@ class NewPost extends Component {
     postDataHandler = () => {
         const data = {
             title: this.state.title,
-            body: this.state.container,
+            body: this.state.content,
             author: this.state.author
         }
-        axios.post( '/posts/', data)
+        axios.post( '/posts', data)
             .then(response => {
                 console.log(response);
-                this.props.history.push('/posts')
+                this.props.history.replace('/posts');
                 // this.setState({ submitted: true });
             });
     }
