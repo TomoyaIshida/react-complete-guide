@@ -1,34 +1,6 @@
 import React, { Component } from 'react';
-
-function List(props){
-  return (
-    <ul>
-      {props.todo.map( (todo, i) => {
-        return <li key={i}> <input type="button" value="☓"
-                              onClick={() => props.deleteTodo(i)}/> {todo.title}</li>
-      })}
-    </ul>
-  )
-};
-
-class Input extends Component {
-  constructor(props){
-    super(props);
-    this.addTodo = this.addTodo.bind(this);
-  }
-  addTodo(){
-    this.props.addTodo(this.refs.newText.value);
-    this.refs.newText.value='';
-  }
-  render() {
-    return (
-      <div>
-        <input type="text" ref="newText"/>
-        <input type="button" value="追加" onClick={this.addTodo}/>
-      </div>
-    )
-  }
-};
+import List from './List';
+import Input from './Input';
 
 class App extends Component {
   constructor(props){
